@@ -16,6 +16,7 @@ class App extends Component {
           list={PostList}
         /> */}
         <Resource name="users" list={<ListGuesser />} edit={EditGuesser} />
+        <Resource name="students" list={<ListGuesser />} edit={EditGuesser} />
       </Admin>
     );
   }
