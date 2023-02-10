@@ -1,22 +1,38 @@
-import React, { Component } from "react";
-import { Admin, Delete, Resource, ListGuesser, EditGuesser } from "react-admin";
+import React, { Component } from 'react';
+import {
+  fetchUtils,
+  Admin,
+  Delete,
+  Resource,
+  ListGuesser,
+  EditGuesser,
+} from 'react-admin';
+import drfProvider from 'ra-data-django-rest-framework';
+import { authProvider } from './utils/authProvider';
 
-import drfProvider from "ra-data-django-rest-framework";
+const httpClient = (url, options = {}) => {
+  if (!options.headers) {
+    options.headers = new Headers({ Accept: 'application/json' });
+  }
+  const { access } = JSON.parse(localStorage.getItem('auth'));
+  options.headers.set('Authorization', `Bearer ${access}`);
+  return fetchUtils.fetchJson(url, options);
+};
 
-const dataProvider = drfProvider("http://localhost:8000");
+const dataProvider = drfProvider('http://localhost:8000', httpClient);
 
 // import { PostList } from './posts'
 
 class App extends Component {
   render() {
     return (
-      <Admin dataProvider={dataProvider}>
+      <Admin dataProvider={dataProvider} authProvider={authProvider}>
         {/* <Resource
           name="posts"
           list={PostList}
         /> */}
-        <Resource name="users" list={<ListGuesser />} edit={EditGuesser} />
-        <Resource name="students" list={<ListGuesser />} edit={EditGuesser} />
+        <Resource name='users' list={<ListGuesser />} edit={EditGuesser} />
+        <Resource name='students' list={<ListGuesser />} edit={EditGuesser} />
       </Admin>
     );
   }
