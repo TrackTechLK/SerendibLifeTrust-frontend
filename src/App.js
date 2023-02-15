@@ -9,6 +9,8 @@ import {
 } from 'react-admin';
 import drfProvider from 'ra-data-django-rest-framework';
 import { authProvider } from './utils/authProvider';
+import theme from './theme';
+import LoginPage from './components/login';
 
 const httpClient = (url, options = {}) => {
   if (!options.headers) {
@@ -26,7 +28,7 @@ const dataProvider = drfProvider('http://localhost:8000', httpClient);
 class App extends Component {
   render() {
     return (
-      <Admin dataProvider={dataProvider} authProvider={authProvider}>
+      <Admin loginPage={LoginPage} dataProvider={dataProvider} authProvider={authProvider} theme={theme}>
         {/* <Resource
           name="posts"
           list={PostList}
