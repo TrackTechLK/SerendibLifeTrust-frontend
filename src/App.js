@@ -48,6 +48,13 @@ class App extends Component {
           edit={StudentEdit}
           create={StudentCreate}
         />
+        <Resource name="sponsors" list={<ListGuesser />} edit={EditGuesser} />
+        <Resource
+          name="scholarships"
+          list={<ListGuesser />}
+          edit={EditGuesser}
+        />
+        <Resource name="payments" list={<ListGuesser />} edit={EditGuesser} />
       </Admin>
     );
   }
