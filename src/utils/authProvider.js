@@ -1,9 +1,9 @@
 export const authProvider = {
   login: async ({ username, password }) => {
-    const request = new Request('http://127.0.0.1:8000/api/token/', {
-      method: 'POST',
+    const request = new Request("http://127.0.0.1:8000/api/token/", {
+      method: "POST",
       body: JSON.stringify({ username, password }),
-      headers: new Headers({ 'Content-Type': 'application/json' }),
+      headers: new Headers({ "Content-Type": "application/json" }),
     });
 
     try {
@@ -12,28 +12,28 @@ export const authProvider = {
         throw new Error(response.statusText);
       }
       const auth = await response.json();
-      localStorage.setItem('auth', JSON.stringify(auth));
+      localStorage.setItem("auth", JSON.stringify(auth));
     } catch (error) {
       console.log(error);
-      throw new Error('Network error');
+      throw new Error("Network error");
     }
   },
   checkError: async (error) => {
     const status = error.status;
     if (status === 401) {
       // Token is invalid or expired
-      const auth = JSON.parse(localStorage.getItem('auth'));
+      const auth = JSON.parse(localStorage.getItem("auth"));
       const refresh = auth.refresh;
 
       if (!refresh) {
         // localStorage.removeItem('access');
-        throw new Error('No refresh token');
+        throw new Error("No refresh token");
       }
 
-      const request = new Request('http://127.0.0.1:8000/api/token/refresh/', {
-        method: 'POST',
+      const request = new Request("http://127.0.0.1:8000/api/token/refresh/", {
+        method: "POST",
         body: JSON.stringify({ refresh }),
-        headers: new Headers({ 'Content-Type': 'application/json' }),
+        headers: new Headers({ "Content-Type": "application/json" }),
       });
 
       try {
@@ -42,22 +42,23 @@ export const authProvider = {
           throw new Error(response.statusText);
         }
         const { access } = await response.json();
-        localStorage.setItem('auth', JSON.stringify({ ...auth, access }));
+        localStorage.setItem("auth", JSON.stringify({ ...auth, access }));
       } catch (err) {
         console.log(err);
         // localStorage.removeItem('access');
         // localStorage.removeItem('refresh');
-        throw new Error('Network error');
+        throw new Error("Network error");
       }
     }
   },
   checkAuth: async () => {
-    const { access } = JSON.parse(localStorage.getItem('auth'));
+    const { access } = JSON.parse(localStorage.getItem("auth"));
     if (!access) {
       throw new Error();
     }
   },
   logout: async () => {
-    localStorage.removeItem('auth');
+    localStorage.removeItem("auth");
   },
+  getPermissions: () => Promise.resolve(""),
 };
