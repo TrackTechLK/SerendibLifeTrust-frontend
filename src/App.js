@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
   fetchUtils,
   Admin,
@@ -6,25 +6,28 @@ import {
   Resource,
   ListGuesser,
   EditGuesser,
-} from "react-admin";
-import drfProvider from "ra-data-django-rest-framework";
-import { authProvider } from "./utils/authProvider";
-import theme from "./theme";
-import LoginPage from "./components/login";
-import StudentList from "./resourses/student/StudentList";
-import StudentEdit from "./resourses/student/StudentEdit";
-import StudentCreate from "./resourses/student/StudentCreate";
+} from 'react-admin';
+import drfProvider from 'ra-data-django-rest-framework';
+import { authProvider } from './utils/authProvider';
+import theme from './theme';
+import LoginPage from './components/login';
+import StudentList from './resourses/student/StudentList';
+import StudentEdit from './resourses/student/StudentEdit';
+import StudentCreate from './resourses/student/StudentCreate';
+import SponsorCreate from './resourses/student/SponsorCreate';
+import SponsorEdit from './resourses/student/SponsorEdit';
+import SponsorList from './resourses/student/SponsorList';
 
 const httpClient = (url, options = {}) => {
   if (!options.headers) {
-    options.headers = new Headers({ Accept: "application/json" });
+    options.headers = new Headers({ Accept: 'application/json' });
   }
-  const { access } = JSON.parse(localStorage.getItem("auth"));
-  options.headers.set("Authorization", `Bearer ${access}`);
+  const { access } = JSON.parse(localStorage.getItem('auth'));
+  options.headers.set('Authorization', `Bearer ${access}`);
   return fetchUtils.fetchJson(url, options);
 };
 
-const dataProvider = drfProvider("http://localhost:8000", httpClient);
+const dataProvider = drfProvider('http://localhost:8000', httpClient);
 
 // import { PostList } from './posts'
 
@@ -41,20 +44,25 @@ class App extends Component {
           name="posts"
           list={PostList}
         /> */}
-        <Resource name="users" list={<ListGuesser />} edit={EditGuesser} />
+        <Resource name='users' list={<ListGuesser />} edit={EditGuesser} />
         <Resource
-          name="students"
+          name='students'
           list={StudentList}
           edit={StudentEdit}
           create={StudentCreate}
         />
-        <Resource name="sponsors" list={<ListGuesser />} edit={EditGuesser} />
         <Resource
-          name="scholarships"
+          name='sponsors'
+          list={SponsorList}
+          edit={SponsorEdit}
+          create={SponsorCreate}
+        />
+        <Resource
+          name='scholarships'
           list={<ListGuesser />}
           edit={EditGuesser}
         />
-        <Resource name="payments" list={<ListGuesser />} edit={EditGuesser} />
+        <Resource name='payments' list={<ListGuesser />} edit={EditGuesser} />
       </Admin>
     );
   }
