@@ -1,6 +1,8 @@
+import { BACKEND_URL } from "../constants";
+
 export const authProvider = {
   login: async ({ username, password }) => {
-    const request = new Request("http://127.0.0.1:8000/api/token/", {
+    const request = new Request(BACKEND_URL + "/api/token/", {
       method: "POST",
       body: JSON.stringify({ username, password }),
       headers: new Headers({ "Content-Type": "application/json" }),
@@ -30,7 +32,7 @@ export const authProvider = {
         throw new Error("No refresh token");
       }
 
-      const request = new Request("http://127.0.0.1:8000/api/token/refresh/", {
+      const request = new Request(BACKEND_URL + "/api/token/refresh/", {
         method: "POST",
         body: JSON.stringify({ refresh }),
         headers: new Headers({ "Content-Type": "application/json" }),

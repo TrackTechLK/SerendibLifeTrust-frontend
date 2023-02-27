@@ -17,6 +17,7 @@ import StudentCreate from './resourses/student/StudentCreate';
 import SponsorCreate from './resourses/student/SponsorCreate';
 import SponsorEdit from './resourses/student/SponsorEdit';
 import SponsorList from './resourses/student/SponsorList';
+import { BACKEND_URL } from './constants';
 
 const httpClient = (url, options = {}) => {
   if (!options.headers) {
@@ -27,12 +28,13 @@ const httpClient = (url, options = {}) => {
   return fetchUtils.fetchJson(url, options);
 };
 
-const dataProvider = drfProvider('http://localhost:8000', httpClient);
+const dataProvider = drfProvider(BACKEND_URL, httpClient);
 
 // import { PostList } from './posts'
 
 class App extends Component {
   render() {
+    console.log({BACKEND_URL: process.env.REACT_APP_BACKEND_URL})
     return (
       <Admin
         loginPage={LoginPage}
