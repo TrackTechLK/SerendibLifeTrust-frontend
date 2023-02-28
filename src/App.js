@@ -42,10 +42,6 @@ class App extends Component {
         authProvider={authProvider}
         theme={theme}
       >
-        {/* <Resource
-          name="posts"
-          list={PostList}
-        /> */}
         <Resource name='users' list={<ListGuesser />} edit={EditGuesser} />
         <Resource
           name='students'
