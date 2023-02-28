@@ -30,8 +30,6 @@ const httpClient = (url, options = {}) => {
 
 const dataProvider = drfProvider(BACKEND_URL, httpClient);
 
-// import { PostList } from './posts'
-
 class App extends Component {
   render() {
     console.log({BACKEND_URL: process.env.REACT_APP_BACKEND_URL})
