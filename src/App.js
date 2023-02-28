@@ -7,7 +7,7 @@ import {
   ListGuesser,
   EditGuesser,
 } from 'react-admin';
-import drfProvider from 'ra-data-django-rest-framework';
+import drfProvider from './utils/Dataprovider/index.ts';
 import { authProvider } from './utils/authProvider';
 import theme from './theme';
 import LoginPage from './components/login';
