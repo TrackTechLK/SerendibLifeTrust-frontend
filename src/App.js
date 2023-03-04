@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {
   fetchUtils,
   Admin,
-  Delete,
   Resource,
   ListGuesser,
   EditGuesser,

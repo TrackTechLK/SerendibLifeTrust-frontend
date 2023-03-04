@@ -1,12 +1,4 @@
-import {
-  List,
-  Datagrid,
-  TextField,
-  DateField,
-  BooleanField,
-  NumberField,
-  EditButton,
-} from 'react-admin';
+import { List, Datagrid, TextField, EditButton } from 'react-admin';
 
 const SponsorList = () => (
   <List>

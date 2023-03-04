@@ -2,8 +2,6 @@ import {
   List,
   Datagrid,
   TextField,
-  DateField,
-  BooleanField,
   NumberField,
   EditButton,
   ReferenceField,

@@ -1,10 +1,4 @@
-import {
-  TextInput,
-  NumberInput,
-  DateInput,
-  SimpleForm,
-  Create,
-} from 'react-admin';
+import { TextInput, SimpleForm, Create } from 'react-admin';
 
 const SponsorCreate = () => (
   <Create>

@@ -1,11 +1,10 @@
 import {
-  List,
-  Datagrid,
   TextInput,
   NumberInput,
-  DateInput,
   Create,
   SimpleForm,
+  ReferenceInput,
+  AutocompleteInput,
 } from 'react-admin';
 
 const ScholarshipCreate = () => (
@@ -14,8 +13,12 @@ const ScholarshipCreate = () => (
       <NumberInput source='amount_per_payment' />
       <NumberInput source='total_amount' />
       <TextInput source='payment_frequency' />
-      <NumberInput source='student' />
-      <NumberInput source='sponsor' />
+      <ReferenceInput source='student' reference='students'>
+        <AutocompleteInput optionText='full_name' />
+      </ReferenceInput>
+      <ReferenceInput source='sponsor' reference='sponsors'>
+        <AutocompleteInput optionText='full_name' />
+      </ReferenceInput>
     </SimpleForm>
   </Create>
 );

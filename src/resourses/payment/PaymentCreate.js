@@ -1,11 +1,10 @@
 import {
-  List,
-  Datagrid,
   TextInput,
   NumberInput,
   DateInput,
   Create,
   SimpleForm,
+  ReferenceInput,
 } from 'react-admin';
 
 export default function PaymentCreate() {
@@ -15,7 +14,7 @@ export default function PaymentCreate() {
         <NumberInput source='amount' />
         <DateInput source='payment_time' />
         <TextInput source='remarks' />
-        <TextInput source='scholarship' />
+        <ReferenceInput source='scholarship' reference='scholarships' />
       </SimpleForm>
     </Create>
   );

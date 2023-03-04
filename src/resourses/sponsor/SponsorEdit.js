@@ -1,12 +1,4 @@
-import {
-  List,
-  Datagrid,
-  TextInput,
-  NumberInput,
-  DateInput,
-  Edit,
-  SimpleForm,
-} from 'react-admin';
+import { TextInput, Edit, SimpleForm } from 'react-admin';
 
 const SponsorEdit = () => (
   <Edit>
