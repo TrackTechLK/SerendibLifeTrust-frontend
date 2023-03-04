@@ -14,10 +14,16 @@ import LoginPage from './components/login';
 import StudentList from './resourses/student/StudentList';
 import StudentEdit from './resourses/student/StudentEdit';
 import StudentCreate from './resourses/student/StudentCreate';
-import SponsorCreate from './resourses/student/SponsorCreate';
-import SponsorEdit from './resourses/student/SponsorEdit';
-import SponsorList from './resourses/student/SponsorList';
+import SponsorCreate from './resourses/sponsor/SponsorCreate';
+import SponsorEdit from './resourses/sponsor/SponsorEdit';
+import SponsorList from './resourses/sponsor/SponsorList';
 import { BACKEND_URL } from './constants';
+import PaymentEdit from './resourses/payment/PaymentEdit';
+import PaymentList from './resourses/payment/PaymentList';
+import ScholarshipList from './resourses/scholarship/ScholarshipList';
+import ScholarshipEdit from './resourses/scholarship/ScholarshipEdit';
+import ScholarshipCreate from './resourses/scholarship/ScholarshipCreate';
+import PaymentCreate from './resourses/payment/PaymentCreate';
 
 const httpClient = (url, options = {}) => {
   if (!options.headers) {
@@ -32,7 +38,7 @@ const dataProvider = drfProvider(BACKEND_URL, httpClient);
 
 class App extends Component {
   render() {
-    console.log({BACKEND_URL: process.env.REACT_APP_BACKEND_URL})
+    console.log({ BACKEND_URL: process.env.REACT_APP_BACKEND_URL });
     return (
       <Admin
         loginPage={LoginPage}
@@ -55,10 +61,16 @@ class App extends Component {
         />
         <Resource
           name='scholarships'
-          list={<ListGuesser />}
-          edit={EditGuesser}
+          list={ScholarshipList}
+          edit={ScholarshipEdit}
+          create={ScholarshipCreate}
         />
-        <Resource name='payments' list={<ListGuesser />} edit={EditGuesser} />
+        <Resource
+          name='payments'
+          list={PaymentList}
+          edit={PaymentEdit}
+          create={PaymentCreate}
+        />
       </Admin>
     );
   }
