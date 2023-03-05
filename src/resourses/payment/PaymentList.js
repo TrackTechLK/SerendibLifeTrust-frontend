@@ -9,7 +9,7 @@ import {
 
 const PaymentList = () => (
   <List>
-    <Datagrid>
+    <Datagrid rowClick={'show'}>
       <TextField source='id' />
       <NumberField source='amount' />
       <TextField source='payment_time' />

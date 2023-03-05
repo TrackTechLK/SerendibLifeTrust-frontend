@@ -23,6 +23,10 @@ import ScholarshipList from './resourses/scholarship/ScholarshipList';
 import ScholarshipEdit from './resourses/scholarship/ScholarshipEdit';
 import ScholarshipCreate from './resourses/scholarship/ScholarshipCreate';
 import PaymentCreate from './resourses/payment/PaymentCreate';
+import StudentShow from './resourses/student/StudentShow';
+import ScholarshipShow from './resourses/scholarship/ScholarshipShow';
+import SponsorShow from './resourses/sponsor/SponsorShow';
+import PaymentShow from './resourses/payment/PaymentShow';
 
 const httpClient = (url, options = {}) => {
   if (!options.headers) {
@@ -51,24 +55,28 @@ class App extends Component {
           list={StudentList}
           edit={StudentEdit}
           create={StudentCreate}
+          show={StudentShow}
         />
         <Resource
           name='sponsors'
           list={SponsorList}
           edit={SponsorEdit}
           create={SponsorCreate}
+          show={SponsorShow}
         />
         <Resource
           name='scholarships'
           list={ScholarshipList}
           edit={ScholarshipEdit}
           create={ScholarshipCreate}
+          show={ScholarshipShow}
         />
         <Resource
           name='payments'
           list={PaymentList}
           edit={PaymentEdit}
           create={PaymentCreate}
+          show={PaymentShow}
         />
       </Admin>
     );

@@ -2,7 +2,7 @@ import { List, Datagrid, TextField, EditButton } from 'react-admin';
 
 const SponsorList = () => (
   <List>
-    <Datagrid>
+    <Datagrid rowClick={'show'}>
       <TextField source='id' />
       <TextField source='full_name' />
       <TextField source='contact' />

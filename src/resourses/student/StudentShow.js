@@ -1,15 +1,15 @@
+import { Divider } from '@mui/material';
 import {
-  List,
-  Datagrid,
-  TextField,
   DateField,
   NumberField,
-  EditButton,
+  Show,
+  SimpleShowLayout,
+  TextField,
 } from 'react-admin';
 
-const StudentList = () => (
-  <List>
-    <Datagrid rowClick={'show'}>
+const StudentShow = () => (
+  <Show>
+    <SimpleShowLayout divider={<Divider flexItem />}>
       <TextField source='id' />
       <TextField source='full_name' />
       <TextField source='contact' />
@@ -19,9 +19,8 @@ const StudentList = () => (
       <NumberField source='duration_of_course_years' />
       <DateField source='start_date' />
       <DateField source='end_date' />
-      <EditButton />
-    </Datagrid>
-  </List>
+    </SimpleShowLayout>
+  </Show>
 );
 
-export default StudentList;
+export default StudentShow;

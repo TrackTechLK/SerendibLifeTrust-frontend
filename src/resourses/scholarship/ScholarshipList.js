@@ -9,7 +9,7 @@ import {
 
 const ScholarshipList = () => (
   <List>
-    <Datagrid>
+    <Datagrid rowClick={'show'}>
       <TextField source='id' />
       <NumberField source='amount_per_payment' />
       <NumberField source='total_amount' />
