@@ -1,16 +1,20 @@
-import { List, Datagrid, TextField, EditButton } from 'react-admin';
+import { List, Datagrid, TextField, EditButton, TextInput } from 'react-admin';
 
-const SponsorList = () => (
-  <List>
-    <Datagrid rowClick={'show'}>
-      <TextField source='id' />
-      <TextField source='full_name' />
-      <TextField source='contact' />
-      <TextField source='email' />
+const SponsorList = () => {
+  const sponsorFilters = [<TextInput label='Search' source='q' alwaysOn />];
 
-      <EditButton />
-    </Datagrid>
-  </List>
-);
+  return (
+    <List filters={sponsorFilters}>
+      <Datagrid rowClick={'show'}>
+        <TextField source='id' />
+        <TextField source='full_name' />
+        <TextField source='contact' />
+        <TextField source='email' />
+
+        <EditButton />
+      </Datagrid>
+    </List>
+  );
+};
 
 export default SponsorList;

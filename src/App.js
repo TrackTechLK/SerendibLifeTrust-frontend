@@ -6,6 +6,10 @@ import {
   ListGuesser,
   EditGuesser,
 } from 'react-admin';
+import PeopleIcon from '@mui/icons-material/People';
+import SchoolIcon from '@mui/icons-material/School';
+import PaymentIcon from '@mui/icons-material/Payment';
+import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import drfProvider from './utils/Dataprovider/index.ts';
 import { authProvider } from './utils/authProvider';
 import theme from './theme';
@@ -51,6 +55,7 @@ class App extends Component {
       >
         <Resource name='users' list={<ListGuesser />} edit={EditGuesser} />
         <Resource
+          icon={PeopleIcon}
           name='students'
           list={StudentList}
           edit={StudentEdit}
@@ -58,6 +63,7 @@ class App extends Component {
           show={StudentShow}
         />
         <Resource
+          icon={AccountBalanceIcon}
           name='sponsors'
           list={SponsorList}
           edit={SponsorEdit}
@@ -65,6 +71,7 @@ class App extends Component {
           show={SponsorShow}
         />
         <Resource
+          icon={SchoolIcon}
           name='scholarships'
           list={ScholarshipList}
           edit={ScholarshipEdit}
@@ -72,6 +79,7 @@ class App extends Component {
           show={ScholarshipShow}
         />
         <Resource
+          icon={PaymentIcon}
           name='payments'
           list={PaymentList}
           edit={PaymentEdit}
