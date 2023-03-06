@@ -25,7 +25,7 @@ const MyAppBar = (props) => {
       <Toolbar style={{ maxHeight: '48px' }}>
         <span style={{ display: 'flex', alignItems: 'center' }}>
           <SidebarToggleButton />
-          <Typography variant='h6' color='inherit' id='react-admin-title' />
+          <Typography color='inherit' id='react-admin-title' />
         </span>
         <Typography style={{ position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%, -50%)', }} variant='h6' color='inherit'>
           Serendib Life Trust
