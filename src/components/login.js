@@ -28,7 +28,7 @@ function Copyright(props) {
       <p>Made with &hearts; by </p>
       <a
         color="inherit"
-        //   href="https://mui.com/"
+      //   href="https://mui.com/"
       >
         TrackTech
       </a>{" "}
@@ -44,10 +44,6 @@ export default function LoginPage() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
-    });
   };
 
   return (

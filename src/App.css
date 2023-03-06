@@ -32,7 +32,26 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.RaSidebar-fixed {
+  background-color: transparent !important;
+}
+
+.RaLayout-root {
+  background-color: transparent !important;
+}
+
+.glass {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+  backdrop-filter: blur(12.9px) !important;
+  -webkit-backdrop-filter: blur(12.9px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
 }
