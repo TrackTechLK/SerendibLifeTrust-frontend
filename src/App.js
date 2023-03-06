@@ -31,6 +31,7 @@ import StudentShow from './resourses/student/StudentShow';
 import ScholarshipShow from './resourses/scholarship/ScholarshipShow';
 import SponsorShow from './resourses/sponsor/SponsorShow';
 import PaymentShow from './resourses/payment/PaymentShow';
+import CustomLayout from './components/CustomLayout';
 
 const httpClient = (url, options = {}) => {
   if (!options.headers) {
@@ -52,6 +53,7 @@ class App extends Component {
         dataProvider={dataProvider}
         authProvider={authProvider}
         theme={theme}
+        layout={CustomLayout}
       >
         <Resource name='users' list={<ListGuesser />} edit={EditGuesser} />
         <Resource
