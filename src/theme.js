@@ -8,7 +8,7 @@ const theme = {
     RaMenu: {
       styleOverrides: {
         root: {
-          marginLeft: 10,
+          // marginLeft: 10,
           marginTop: 25,
           paddingTop: 10,
           backgroundColor: 'rgba(255,255,255,0.9)',
@@ -16,9 +16,9 @@ const theme = {
         }
       }
     },
-    RaList: {
+    RaLayout: {
       styleOverrides: {
-        root: {
+        content: {
           margin: 10,
           marginTop: 25,
           padding: 20,
@@ -27,6 +27,17 @@ const theme = {
         }
       }
     },
+    // RaList: {
+    //   styleOverrides: {
+    //     root: {
+    //       margin: 10,
+    //       marginTop: 25,
+    //       padding: 20,
+    //       backgroundColor: 'rgba(255,255,255,0.9)',
+    //       borderRadius: 5
+    //     }
+    //   }
+    // },
     RaDatagrid: {
       styleOverrides: {
         root: {
