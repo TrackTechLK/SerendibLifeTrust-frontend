@@ -32,7 +32,7 @@ const CustomLayout = (props) => (
     appBar={CustomAppBar}
     // sidebar={MySidebar}
     menu={CustomMenu}
-    sx={{ '& .RaLayout-appFrame': { backgroundColor: 'transparent' } }}
+    sx={{ '& .RaLayout-content': { marginTop: 2 } }}
   />
 );
 
