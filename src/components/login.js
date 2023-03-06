@@ -92,7 +92,29 @@ export default function LoginPage() {
                 }}
                 className='glass'
               >
-                <LoginForm />
+                <Typography
+                  style={{
+                    textAlign: 'center',
+                    fontSize: 40,
+                    fontWeight: 'bold',
+                    marginBottom: 20,
+                  }}
+                >
+                  Serendib Life Trust
+                </Typography>
+                <Typography style={{ textAlign: 'center', fontSize: 30 }}>
+                  Login
+                </Typography>
+                <div
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignContent: 'center',
+                  }}
+                >
+                  <LoginForm />
+                </div>
+
                 {/* <Copyright /> */}
               </Card>
             </div>
