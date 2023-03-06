@@ -1,4 +1,4 @@
-import { defaultTheme } from "react-admin";
+import { defaultTheme } from 'react-admin';
 
 const theme = {
   ...defaultTheme,
@@ -8,36 +8,25 @@ const theme = {
     RaMenu: {
       styleOverrides: {
         root: {
-          // marginLeft: 10,
+          marginLeft: 10,
           marginTop: 25,
           paddingTop: 10,
           backgroundColor: 'rgba(255,255,255,0.9)',
-          borderRadius: 5
-        }
-      }
+          borderRadius: 5,
+        },
+      },
     },
-    RaLayout: {
+    RaList: {
       styleOverrides: {
-        content: {
+        root: {
           margin: 10,
           marginTop: 25,
           padding: 20,
           backgroundColor: 'rgba(255,255,255,0.9)',
-          borderRadius: 5
-        }
-      }
+          borderRadius: 5,
+        },
+      },
     },
-    // RaList: {
-    //   styleOverrides: {
-    //     root: {
-    //       margin: 10,
-    //       marginTop: 25,
-    //       padding: 20,
-    //       backgroundColor: 'rgba(255,255,255,0.9)',
-    //       borderRadius: 5
-    //     }
-    //   }
-    // },
     RaDatagrid: {
       styleOverrides: {
         root: {
@@ -48,8 +37,8 @@ const theme = {
           // boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
           // backgroundColor: 'rgba(255, 255, 255, 0.1)',
           // backdropFilter: 'blur(1.9px)',
-          "& .RaDatagrid-headerCell": {
-            backgroundColor: "#ddd", //change colors later
+          '& .RaDatagrid-headerCell': {
+            backgroundColor: '#ddd', //change colors later
           },
         },
       },
@@ -58,15 +47,15 @@ const theme = {
       styleOverrides: {
         active: {
           backgroundColor: 'red',
-          borderLeftStyle: "none",
+          borderLeftStyle: 'none',
           borderRightColor: defaultTheme.palette.secondary.main,
           // borderRightWidth: defaultTheme.spacing(0.5),
-          borderRightStyle: "solid",
+          borderRightStyle: 'solid',
           // backgroundColor: defaultTheme.palette.action.selected, // Defined in the default palette
           // color: defaultTheme.palette.primary.main,
           fontWeight: defaultTheme.typography.fontWeightBold,
         },
-      }
+      },
     },
   },
 };
