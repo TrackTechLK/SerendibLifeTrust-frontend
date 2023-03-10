@@ -4,6 +4,7 @@ import {
   ReferenceField,
   Show,
   SimpleShowLayout,
+  BooleanField,
   TextField,
 } from 'react-admin';
 
@@ -19,6 +20,7 @@ const PaymentShow = () => (
         reference='scholarships'
         link='show'
       />
+      <BooleanField source='paid' />
     </SimpleShowLayout>
   </Show>
 );

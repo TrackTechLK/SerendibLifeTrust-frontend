@@ -5,6 +5,7 @@ import {
   NumberField,
   EditButton,
   ReferenceField,
+  BooleanField,
 } from 'react-admin';
 
 const PaymentList = () => (
@@ -15,7 +16,7 @@ const PaymentList = () => (
       <TextField source='payment_time' />
       <TextField source='remarks' />
       <ReferenceField source='scholarship' reference='scholarships' />
-
+      <BooleanField source='paid' />
       <EditButton />
     </Datagrid>
   </List>
