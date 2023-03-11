@@ -40,6 +40,7 @@ export const getOrderingQuery = (sort: Sort) => {
   };
 };
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default (
   apiUrl: String,
   httpClient: Function = fetchUtils.fetchJson
@@ -74,9 +75,9 @@ export default (
     },
 
     getMany: (resource, params) => {
-      return Promise.all(
-        params.ids.map(id => getOneJson(resource, id))
-      ).then(data => ({ data }));
+      return Promise.all(params.ids.map((id) => getOneJson(resource, id))).then(
+        (data) => ({ data })
+      );
     },
 
     getManyReference: async (resource, params) => {
@@ -105,13 +106,13 @@ export default (
 
     updateMany: (resource, params) =>
       Promise.all(
-        params.ids.map(id =>
+        params.ids.map((id) =>
           httpClient(`${apiUrl}/${resource}/${id}/`, {
             method: 'PATCH',
             body: JSON.stringify(params.data),
           })
         )
-      ).then(responses => ({ data: responses.map(({ json }) => json.id) })),
+      ).then((responses) => ({ data: responses.map(({ json }) => json.id) })),
 
     create: async (resource, params) => {
       const { json } = await httpClient(`${apiUrl}/${resource}/`, {
@@ -130,11 +131,21 @@ export default (
 
     deleteMany: (resource, params) =>
       Promise.all(
-        params.ids.map(id =>
+        params.ids.map((id) =>
           httpClient(`${apiUrl}/${resource}/${id}/`, {
             method: 'DELETE',
           })
         )
       ).then(() => ({ data: [] })),
+
+    getNextPayment: async (id: number) => {
+      const { json } = await httpClient(
+        `${apiUrl}/scholarships/${id}/next_payment/`,
+        {
+          method: 'GET',
+        }
+      );
+      return { data: json };
+    },
   };
 };
