@@ -15,7 +15,7 @@ const StudentShow = () => (
       <TextField source='full_name' />
       <TextField source='contact' />
       <TextField source='email' />
-      <BooleanField source="school student" />
+      <BooleanField source="school_student" />
       <TextField source="study" />
       <TextField source='course' />
       <NumberField source='duration_of_course_years' />

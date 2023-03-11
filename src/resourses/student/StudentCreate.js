@@ -13,7 +13,7 @@ const StudentCreate = () => (
       <TextInput source="full_name" />
       <TextInput source="contact" />
       <TextInput source="email" />
-      <BooleanInput source="school student" />
+      <BooleanInput source="school_student" />
       <TextInput source="study" />
       <TextInput source="course" />
       <NumberInput source="duration_of_course_years" />
