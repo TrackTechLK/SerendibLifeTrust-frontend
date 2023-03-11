@@ -8,11 +8,11 @@ const theme = {
     RaMenu: {
       styleOverrides: {
         root: {
-          // marginLeft: 10,
+          // marginLeft: 3,
           marginTop: 25,
           paddingTop: 10,
           backgroundColor: 'rgba(255,255,255,0.9)',
-          borderRadius: 5
+          borderRadius: '0px 10px 10px 0px'
         }
       }
     },
