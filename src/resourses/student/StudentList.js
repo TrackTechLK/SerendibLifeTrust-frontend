@@ -6,6 +6,7 @@ import {
   NumberField,
   EditButton,
   TextInput,
+  BooleanField,
 } from 'react-admin';
 
 const StudentList = () => {
@@ -17,7 +18,8 @@ const StudentList = () => {
         <TextField source='full_name' />
         <TextField source='contact' />
         <TextField source='email' />
-        <TextField source='university' />
+        <BooleanField source="school student" />
+        <TextField source="study" />
         <TextField source='course' />
         <NumberField source='duration_of_course_years' />
         <DateField source='start_date' />
