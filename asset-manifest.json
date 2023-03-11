@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/SerendibLifeTrust-frontend/static/css/main.4a098c46.css",
-    "main.js": "/SerendibLifeTrust-frontend/static/js/main.181eb944.js",
+    "main.js": "/SerendibLifeTrust-frontend/static/js/main.7b462814.js",
     "static/js/787.cda612ba.chunk.js": "/SerendibLifeTrust-frontend/static/js/787.cda612ba.chunk.js",
     "static/media/bg-white.jpg": "/SerendibLifeTrust-frontend/static/media/bg-white.68b15f688a24e9ea8f9b.jpg",
     "index.html": "/SerendibLifeTrust-frontend/index.html",
     "main.4a098c46.css.map": "/SerendibLifeTrust-frontend/static/css/main.4a098c46.css.map",
-    "main.181eb944.js.map": "/SerendibLifeTrust-frontend/static/js/main.181eb944.js.map",
+    "main.7b462814.js.map": "/SerendibLifeTrust-frontend/static/js/main.7b462814.js.map",
     "787.cda612ba.chunk.js.map": "/SerendibLifeTrust-frontend/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4a098c46.css",
-    "static/js/main.181eb944.js"
+    "static/js/main.7b462814.js"
   ]
 }
