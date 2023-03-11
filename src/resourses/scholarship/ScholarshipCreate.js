@@ -56,9 +56,6 @@ const ScholarshipCreate = () => (
         }
         }
       </FormDataConsumer>
-      {/* <ReferenceInput source='student' reference='students'>
-        <AutocompleteInput optionText='full_name' />
-      </ReferenceInput> */}
       <Section title='Sponsor details' />
       <RadioButtonGroupInput source="sponsor_detials" label='Select whether to create a sponsor or choose existing' defaultValue={'existing'} choices={[
         { id: 'existing', name: 'Choose existing' },
