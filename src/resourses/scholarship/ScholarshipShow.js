@@ -2,6 +2,8 @@ import { Divider } from '@mui/material';
 import {
   NumberField,
   ReferenceField,
+  ReferenceManyField,
+  Datagrid,
   Show,
   SimpleShowLayout,
   TextField,
@@ -20,6 +22,17 @@ const ScholarshipShow = () => (
       <ReferenceField source='sponsor' reference='sponsors' link='show'>
         <TextField source='full_name' />
       </ReferenceField>
+      <ReferenceManyField
+        label='Payments'
+        reference='payments'
+        target='scholarship_id'
+      >
+        <Datagrid rowClick={'show'}>
+          <TextField source='id' />
+          <TextField source='amount' />
+          <TextField source='remarks' />
+        </Datagrid>
+      </ReferenceManyField>
     </SimpleShowLayout>
   </Show>
 );
