@@ -5,6 +5,8 @@ import {
   TextField,
   ReferenceManyField,
   Datagrid,
+  NumberField,
+  ReferenceField,
 } from 'react-admin';
 
 const SponsorShow = () => (
@@ -21,8 +23,15 @@ const SponsorShow = () => (
       >
         <Datagrid rowClick={'show'}>
           <TextField source='id' />
-          <TextField source='student' />
-          <TextField source='sponsor' />
+          <NumberField source='amount_per_payment' />
+          <NumberField source='total_amount' />
+          <TextField source='payment_frequency' />
+          <ReferenceField source='student' reference='students' link='show'>
+            <TextField source='full_name' />
+          </ReferenceField>
+          <ReferenceField source='sponsor' reference='sponsors' link='show'>
+            <TextField source='full_name' />
+          </ReferenceField>
         </Datagrid>
       </ReferenceManyField>
     </SimpleShowLayout>
