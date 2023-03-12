@@ -27,9 +27,9 @@ const ScholarshipCreate = () => (
   <Create>
     <SimpleForm>
       <Section title='Scholarship details' />
-      <NumberInput source='amount_per_payment' />
-      <NumberInput source='total_amount' />
-      <TextInput source='payment_frequency' />
+      {/* <NumberInput source='amount_per_payment' /> */}
+      <NumberInput source='total_amount' required={true} />
+      <TextInput source='payment_frequency' required={true} />
       <Section title='Student details' />
       <RadioButtonGroupInput
         source='student_detials'

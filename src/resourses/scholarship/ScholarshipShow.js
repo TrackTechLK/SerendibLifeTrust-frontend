@@ -32,7 +32,7 @@ const ScholarshipShow = () => {
         <ReferenceManyField
           label='Payments'
           reference='payments'
-          target='scholarship_id'
+          target='scholarship'
         >
           <Datagrid rowClick={'show'}>
             <TextField source='id' />
