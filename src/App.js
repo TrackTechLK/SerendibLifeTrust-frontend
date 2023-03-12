@@ -6,6 +6,7 @@ import {
   ListGuesser,
   EditGuesser,
 } from 'react-admin';
+import './App.css';
 import PeopleIcon from '@mui/icons-material/People';
 import SchoolIcon from '@mui/icons-material/School';
 import PaymentIcon from '@mui/icons-material/Payment';
