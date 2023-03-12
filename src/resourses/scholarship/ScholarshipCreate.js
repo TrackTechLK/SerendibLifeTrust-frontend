@@ -10,7 +10,6 @@ import {
 const ScholarshipCreate = () => (
   <Create>
     <SimpleForm>
-      <NumberInput source='amount_per_payment' />
       <NumberInput source='total_amount' />
       <TextInput source='payment_frequency' />
       <ReferenceInput source='student' reference='students'>
