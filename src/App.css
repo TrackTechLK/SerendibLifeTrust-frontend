@@ -94,9 +94,16 @@
 
 .RaCreate-card {
   background-color: transparent !important;
+  /* backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px); */
   box-shadow: none !important;
 }
 
-.RaToolbar-root {
+.MuiCardContent-root {
+  background-color: white !important;
+  border-radius: 10px;
+}
+
+.MuiToolbar-root {
   background-color: transparent !important;
 }
