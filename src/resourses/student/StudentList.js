@@ -1,3 +1,4 @@
+import { Chip } from '@mui/material';
 import {
   List,
   Datagrid,
@@ -9,8 +10,10 @@ import {
   BooleanField,
 } from 'react-admin';
 
+const studentFilters = [<TextInput label='Search' source='q' alwaysOn />];
+
 const StudentList = () => {
-  const studentFilters = [<TextInput label='Search' source='q' alwaysOn />];
+  // const studentFilters = [];
   return (
     <List filters={studentFilters}>
       <Datagrid rowClick={'show'}>
@@ -18,8 +21,8 @@ const StudentList = () => {
         <TextField source='full_name' />
         <TextField source='contact' />
         <TextField source='email' />
-        <BooleanField source="school_student" />
-        <TextField source="study" />
+        <BooleanField source='school_student' />
+        <TextField source='study' />
         <TextField source='course' />
         <NumberField source='duration_of_course_years' />
         <DateField source='start_date' />
