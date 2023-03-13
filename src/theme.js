@@ -11,8 +11,9 @@ const theme = {
           // marginLeft: 3,
           marginTop: 25,
           paddingTop: 10,
-          backgroundColor: 'rgba(255,255,255,0.9)',
+          backgroundColor: 'rgba(232, 244, 248 ,0.5)',
           borderRadius: '0px 10px 10px 0px',
+          backdropFilter: 'blur(4px)',
         },
       },
     },
@@ -24,6 +25,7 @@ const theme = {
           padding: 20,
           backgroundColor: 'rgba(255,255,255,0.9)',
           borderRadius: 5,
+          backdropFilter: 'blur(4px)',
         },
       },
     },
@@ -47,7 +49,7 @@ const theme = {
           borderRadius: 5,
           // boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
           // backgroundColor: 'rgba(255, 255, 255, 0.1)',
-          // backdropFilter: 'blur(1.9px)',
+
           '& .RaDatagrid-headerCell': {
             backgroundColor: '#ddd', //change colors later
           },
