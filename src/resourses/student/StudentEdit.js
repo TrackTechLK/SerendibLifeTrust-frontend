@@ -4,6 +4,7 @@ import {
   DateInput,
   Edit,
   SimpleForm,
+  BooleanInput,
 } from 'react-admin';
 
 const StudentEdit = () => (
@@ -12,7 +13,8 @@ const StudentEdit = () => (
       <TextInput source='full_name' />
       <TextInput source='contact' />
       <TextInput source='email' />
-      <TextInput source='university' />
+      <BooleanInput source="school_student" />
+      <TextInput source="study" />
       <TextInput source='course' />
       <NumberInput source='duration_of_course_years' />
       <DateInput source='start_date' />

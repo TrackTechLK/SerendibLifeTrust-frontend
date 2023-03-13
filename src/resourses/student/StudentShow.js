@@ -5,6 +5,7 @@ import {
   Show,
   SimpleShowLayout,
   TextField,
+  BooleanField,
 } from 'react-admin';
 
 const StudentShow = () => (
@@ -14,7 +15,8 @@ const StudentShow = () => (
       <TextField source='full_name' />
       <TextField source='contact' />
       <TextField source='email' />
-      <TextField source='university' />
+      <BooleanField source="school_student" />
+      <TextField source="study" />
       <TextField source='course' />
       <NumberField source='duration_of_course_years' />
       <DateField source='start_date' />
